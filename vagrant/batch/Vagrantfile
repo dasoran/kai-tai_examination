@@ -1,0 +1,9 @@
+VAGRANTFILE_API_VERSION = "2"
+
+Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
+
+  config.vm.define :batch do |node|
+    node.vm.box = "centos/7"
+    node.vm.network :private_network, ip:"192.168.33.12"
+  end
+end
